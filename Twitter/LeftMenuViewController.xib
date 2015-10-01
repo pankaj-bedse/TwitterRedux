@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LeftMenuViewController">
+            <connections>
+                <outlet property="profileImage" destination="c1Q-Rv-zKM" id="dEc-Yv-6Fu"/>
+                <outlet property="tableView" destination="efR-ch-AJl" id="JE9-8J-npZ"/>
+                <outlet property="userName" destination="W8b-pU-7SR" id="KBn-sI-Xeq"/>
+                <outlet property="userTagline" destination="bB6-cC-pf4" id="Mtu-i8-OtH"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="efR-ch-AJl">
+                    <rect key="frame" x="0.0" y="116" width="320" height="452"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c1Q-Rv-zKM">
+                    <rect key="frame" x="8" y="8" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="IND-QF-y2Z"/>
+                        <constraint firstAttribute="height" constant="100" id="ehV-qQ-EEw"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pankaj Bedse" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8b-pU-7SR">
+                    <rect key="frame" x="116" y="8" width="196" height="23"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bB6-cC-pf4">
+                    <rect key="frame" x="116" y="46" width="196" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="c1Q-Rv-zKM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="2lt-8W-b6F"/>
+                <constraint firstItem="efR-ch-AJl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5KZ-fC-LW6"/>
+                <constraint firstAttribute="trailing" secondItem="efR-ch-AJl" secondAttribute="trailing" id="CVb-f6-oRI"/>
+                <constraint firstAttribute="trailing" secondItem="bB6-cC-pf4" secondAttribute="trailing" constant="8" id="DAo-dk-ALd"/>
+                <constraint firstItem="W8b-pU-7SR" firstAttribute="leading" secondItem="c1Q-Rv-zKM" secondAttribute="trailing" constant="8" id="QfL-yH-3JR"/>
+                <constraint firstItem="c1Q-Rv-zKM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="drm-QQ-VAD"/>
+                <constraint firstItem="W8b-pU-7SR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="gxE-2C-l3X"/>
+                <constraint firstItem="bB6-cC-pf4" firstAttribute="top" secondItem="W8b-pU-7SR" secondAttribute="bottom" constant="15" id="h1A-Pn-jUE"/>
+                <constraint firstItem="bB6-cC-pf4" firstAttribute="leading" secondItem="c1Q-Rv-zKM" secondAttribute="trailing" constant="8" id="ioX-ZL-0Yo"/>
+                <constraint firstAttribute="bottom" secondItem="efR-ch-AJl" secondAttribute="bottom" id="tY3-ir-GQc"/>
+                <constraint firstItem="efR-ch-AJl" firstAttribute="top" secondItem="c1Q-Rv-zKM" secondAttribute="bottom" constant="8" id="yfA-5Y-zkk"/>
+                <constraint firstAttribute="trailing" secondItem="W8b-pU-7SR" secondAttribute="trailing" constant="8" id="zIc-zX-RbD"/>
+            </constraints>
+            <point key="canvasLocation" x="305" y="213"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

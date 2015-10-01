@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tweetCell" rowHeight="113" id="KGk-i7-Jjw" customClass="TweetCell">
+            <rect key="frame" x="0.0" y="0.0" width="360" height="113"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Micheal Morgan" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAx-b7-kGE">
+                        <rect key="frame" x="74" y="8" width="123" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@theMichelMorgan" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkP-Zs-B1H">
+                        <rect key="frame" x="207" y="8" width="106.5" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="I have seen the future of the newspaper:http://wafafa asfa fa as/.homac" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4v-yW-Urj">
+                        <rect key="frame" x="74" y="38" width="278" height="65.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2hr" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vut-u1-sja">
+                        <rect key="frame" x="334" y="8" width="18" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="58" placeholderIntrinsicHeight="56.5" translatesAutoresizingMaskIntoConstraints="NO" id="2LB-GW-7TC">
+                        <rect key="frame" x="8" y="8" width="58" height="56.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="58" id="YIY-nf-eSa"/>
+                            <constraint firstAttribute="height" constant="56.5" id="bfE-7A-lfN"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="2LB-GW-7TC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="4VY-rF-qAF"/>
+                    <constraint firstItem="c4v-yW-Urj" firstAttribute="top" secondItem="tAx-b7-kGE" secondAttribute="bottom" constant="10" id="6dG-Oi-7SB"/>
+                    <constraint firstItem="xkP-Zs-B1H" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="8DK-O4-qxF"/>
+                    <constraint firstItem="xkP-Zs-B1H" firstAttribute="leading" secondItem="tAx-b7-kGE" secondAttribute="trailing" constant="10" id="Eqb-lf-Oyz"/>
+                    <constraint firstItem="c4v-yW-Urj" firstAttribute="leading" secondItem="2LB-GW-7TC" secondAttribute="trailing" constant="8" id="IY2-1B-tS2"/>
+                    <constraint firstAttribute="bottom" secondItem="c4v-yW-Urj" secondAttribute="bottom" constant="8" id="J3t-SW-TsS"/>
+                    <constraint firstItem="2LB-GW-7TC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="MMn-d0-VHj"/>
+                    <constraint firstAttribute="trailing" secondItem="c4v-yW-Urj" secondAttribute="trailing" constant="8" id="Zrk-il-v6z"/>
+                    <constraint firstItem="Vut-u1-sja" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="jxl-mL-ivr"/>
+                    <constraint firstItem="tAx-b7-kGE" firstAttribute="leading" secondItem="2LB-GW-7TC" secondAttribute="trailing" constant="8" id="k2V-ug-Lyo"/>
+                    <constraint firstItem="tAx-b7-kGE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="o7c-TY-FJJ"/>
+                    <constraint firstAttribute="trailing" secondItem="Vut-u1-sja" secondAttribute="trailing" constant="8" id="wq0-k8-7HN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="profileImage" destination="2LB-GW-7TC" id="vpP-7d-NWQ"/>
+                <outlet property="timeText" destination="Vut-u1-sja" id="OS9-ja-DIV"/>
+                <outlet property="tweetText" destination="c4v-yW-Urj" id="dsC-1T-kIB"/>
+                <outlet property="userId" destination="xkP-Zs-B1H" id="wBS-1s-WnT"/>
+                <outlet property="userName" destination="tAx-b7-kGE" id="b9V-4t-VTs"/>
+            </connections>
+            <point key="canvasLocation" x="325" y="338.5"/>
+        </tableViewCell>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
