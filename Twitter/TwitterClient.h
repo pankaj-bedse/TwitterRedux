@@ -17,4 +17,5 @@
 -(void)createTweetWithParams:(NSDictionary *)params completion:(void(^)(NSDictionary *reply, NSError *error))completion;
 -(void)retweetPostWithId:(NSString *)tweetId completion:(void(^)(NSDictionary *tweet, NSError *error))completion;
 -(void)favoritePostWithId:(NSString *)tweetId completion:(void (^)(NSDictionary *tweet, NSError *error)) completion;
+-(void)getUserWithScreenName:(NSString *)screenName completion:(void (^)(User *user, NSError *error)) completion;
 @end

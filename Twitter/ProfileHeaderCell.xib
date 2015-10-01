@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="profileHeaderCell" rowHeight="173" id="KGk-i7-Jjw" customClass="ProfileHeaderCell">
+            <rect key="frame" x="0.0" y="0.0" width="337" height="173"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ben-aW-MwZ">
+                        <rect key="frame" x="0.0" y="0.0" width="337" height="172.5"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jd2-cS-ewR">
+                        <rect key="frame" x="119" y="8" width="100" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="WQo-nf-tjs"/>
+                            <constraint firstAttribute="height" constant="100" id="sIG-gX-y3t"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pankaj Bedse" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQM-ay-YoC">
+                        <rect key="frame" x="114" y="116" width="108.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@pankajbedse" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sv3-82-tIy">
+                        <rect key="frame" x="118.5" y="139" width="100" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ben-aW-MwZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="5Ta-Va-Rhr"/>
+                    <constraint firstItem="ben-aW-MwZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="AX2-cQ-rzD"/>
+                    <constraint firstAttribute="centerX" secondItem="sv3-82-tIy" secondAttribute="centerX" id="AZg-Ps-8zz"/>
+                    <constraint firstAttribute="centerX" secondItem="jd2-cS-ewR" secondAttribute="centerX" id="H8c-qK-4sY"/>
+                    <constraint firstItem="OQM-ay-YoC" firstAttribute="top" secondItem="jd2-cS-ewR" secondAttribute="bottom" constant="8" id="Nxh-yY-eNH"/>
+                    <constraint firstItem="jd2-cS-ewR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="PXD-xj-EpF"/>
+                    <constraint firstAttribute="trailing" secondItem="ben-aW-MwZ" secondAttribute="trailing" id="pJs-yI-1Vc"/>
+                    <constraint firstItem="sv3-82-tIy" firstAttribute="top" secondItem="OQM-ay-YoC" secondAttribute="bottom" constant="2.5" id="pVf-jF-ExL"/>
+                    <constraint firstAttribute="bottom" secondItem="ben-aW-MwZ" secondAttribute="bottom" id="vMt-Ek-Phz"/>
+                    <constraint firstAttribute="centerX" secondItem="OQM-ay-YoC" secondAttribute="centerX" id="yPC-9L-Wdb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="name" destination="OQM-ay-YoC" id="9pd-Le-pn7"/>
+                <outlet property="profileBgImage" destination="ben-aW-MwZ" id="5db-bv-nUo"/>
+                <outlet property="profileImage" destination="jd2-cS-ewR" id="STh-9T-gdd"/>
+                <outlet property="screenName" destination="sv3-82-tIy" id="YmE-IG-9d4"/>
+            </connections>
+            <point key="canvasLocation" x="147.5" y="272.5"/>
+        </tableViewCell>
+    </objects>
+</document>

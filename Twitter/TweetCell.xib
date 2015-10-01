@@ -25,8 +25,8 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="I have seen the future of the newspaper:http://wafafa asfa fa as/.homac" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4v-yW-Urj">
-                        <rect key="frame" x="74" y="38" width="278" height="65.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="I have seen the future of the newspaper:http://wafafa asfa fa as/.homac" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4v-yW-Urj">
+                        <rect key="frame" x="74" y="38" width="278" height="66.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>

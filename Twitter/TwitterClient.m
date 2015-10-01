@@ -115,4 +115,14 @@ NSString * const kTwitterBaseUrl = @"https://api.twitter.com";
         completion(nil, error);
     }];
 }
+-(void)getUserWithScreenName:(NSString *)screenName completion:(void (^)(User *, NSError *))completion
+{
+    NSString *getUrl = [NSString stringWithFormat:@"1.1/users/show.json?screen_name=%@", screenName];
+    [self GET:getUrl parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        User *user = [[User alloc] initWithDictionary:responseObject];
+        completion(user, nil);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        completion(nil, error);
+    }];
+}
 @end

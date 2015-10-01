@@ -15,6 +15,7 @@
 #import "LeftMenuViewController.h"
 #import "SWRevealViewController.h"
 #import "ProfileViewController.h"
+#import "NewProfileViewController.h"
 
 
 @interface AppDelegate () <LeftMenuDelegate, LoginDelegate>
@@ -104,7 +105,8 @@
     LeftMenuViewController *lmvc = [[LeftMenuViewController alloc] init];
     lmvc.delegate = self;
     UINavigationController *lmnc = [[UINavigationController alloc] initWithRootViewController:lmvc];
-    ProfileViewController *pvc = [[ProfileViewController alloc] init];
+    //ProfileViewController *pvc = [[ProfileViewController alloc] init];
+    NewProfileViewController *pvc = [[NewProfileViewController alloc] init];
     UINavigationController *pnc = [[UINavigationController alloc] initWithRootViewController:pvc];
     
     SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:lmnc frontViewController:pnc];//[[TweetsViewController alloc]init];
