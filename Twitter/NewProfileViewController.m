@@ -13,6 +13,7 @@
 
 @interface NewProfileViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) User *user;
 
 @end
 
@@ -25,7 +26,7 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"ProfileSubheaderCell" bundle:nil] forCellReuseIdentifier:@"profileSubheaderCell"];
     self.tableView.dataSource = self;
     self.tableView.delegate= self;
-    
+//    [self initializeWithUser:[User currentUser]];
     SWRevealViewController *revealController = [self revealViewController];
     
     [revealController panGestureRecognizer];
@@ -38,9 +39,29 @@
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed: 135.0/255.0 green: 206.0/255.0 blue:250/255.0 alpha: 1.0];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-    self.title = @"Me";
+    
+    [self setNavBar];
+    //self.title = @"Me";
 
     
+}
+
+-(void)setNavBar
+{
+    if (self.modalDialog) {
+        // add cancel button
+        UIBarButtonItem *cancel = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(dissmissDialog)];
+        self.navigationItem.leftBarButtonItem = cancel;
+        self.title = self.user.name;
+        
+    } else {
+        self.title = @"Me";
+    }
+}
+
+-(void)dissmissDialog
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -73,11 +94,11 @@
 {
     if (indexPath.row == 0) {
         ProfileHeaderCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"profileHeaderCell"];
-        [cell setCellWithUser:[User currentUser]];
+        [cell setCellWithUser:self.user];
         return cell;
     }
     ProfileSubheaderCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"profileSubheaderCell"];
-    [cell setCellWithUser:[User currentUser]];
+    [cell setCellWithUser:self.user];
     return cell;
 }
 
@@ -96,5 +117,10 @@
     cell.alpha = 1;
     cell.layer.transform = CATransform3DIdentity;
     [UIView commitAnimations];
+}
+
+-(void)initializeWithUser:(User *)user
+{
+    self.user = user;
 }
 @end

@@ -37,31 +37,36 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="58" placeholderIntrinsicHeight="56.5" translatesAutoresizingMaskIntoConstraints="NO" id="2LB-GW-7TC">
-                        <rect key="frame" x="8" y="8" width="58" height="56.5"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGb-Sn-QH8">
+                        <rect key="frame" x="8" y="8" width="58" height="58"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="58" id="YIY-nf-eSa"/>
-                            <constraint firstAttribute="height" constant="56.5" id="bfE-7A-lfN"/>
+                            <constraint firstAttribute="height" constant="58" id="UY8-zA-Q4W"/>
+                            <constraint firstAttribute="width" constant="58" id="doH-HQ-Z6A"/>
                         </constraints>
-                    </imageView>
+                        <state key="normal">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="2LB-GW-7TC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="4VY-rF-qAF"/>
                     <constraint firstItem="c4v-yW-Urj" firstAttribute="top" secondItem="tAx-b7-kGE" secondAttribute="bottom" constant="10" id="6dG-Oi-7SB"/>
                     <constraint firstItem="xkP-Zs-B1H" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="8DK-O4-qxF"/>
+                    <constraint firstItem="ZGb-Sn-QH8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="98m-ps-8qe"/>
                     <constraint firstItem="xkP-Zs-B1H" firstAttribute="leading" secondItem="tAx-b7-kGE" secondAttribute="trailing" constant="10" id="Eqb-lf-Oyz"/>
-                    <constraint firstItem="c4v-yW-Urj" firstAttribute="leading" secondItem="2LB-GW-7TC" secondAttribute="trailing" constant="8" id="IY2-1B-tS2"/>
                     <constraint firstAttribute="bottom" secondItem="c4v-yW-Urj" secondAttribute="bottom" constant="8" id="J3t-SW-TsS"/>
-                    <constraint firstItem="2LB-GW-7TC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="MMn-d0-VHj"/>
+                    <constraint firstItem="ZGb-Sn-QH8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="NE2-jY-id4"/>
+                    <constraint firstItem="tAx-b7-kGE" firstAttribute="leading" secondItem="ZGb-Sn-QH8" secondAttribute="trailing" constant="8" id="R75-vs-Yd6"/>
+                    <constraint firstItem="c4v-yW-Urj" firstAttribute="top" secondItem="tAx-b7-kGE" secondAttribute="bottom" constant="9.5" id="RHi-Gk-Auc"/>
                     <constraint firstAttribute="trailing" secondItem="c4v-yW-Urj" secondAttribute="trailing" constant="8" id="Zrk-il-v6z"/>
+                    <constraint firstItem="tAx-b7-kGE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="c7e-I0-gck"/>
                     <constraint firstItem="Vut-u1-sja" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="jxl-mL-ivr"/>
-                    <constraint firstItem="tAx-b7-kGE" firstAttribute="leading" secondItem="2LB-GW-7TC" secondAttribute="trailing" constant="8" id="k2V-ug-Lyo"/>
                     <constraint firstItem="tAx-b7-kGE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="o7c-TY-FJJ"/>
+                    <constraint firstItem="c4v-yW-Urj" firstAttribute="leading" secondItem="ZGb-Sn-QH8" secondAttribute="trailing" constant="8" id="tEM-u6-Sfj"/>
                     <constraint firstAttribute="trailing" secondItem="Vut-u1-sja" secondAttribute="trailing" constant="8" id="wq0-k8-7HN"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="profileImage" destination="2LB-GW-7TC" id="vpP-7d-NWQ"/>
+                <outlet property="profileImageBtn" destination="ZGb-Sn-QH8" id="7SX-Hn-abK"/>
                 <outlet property="timeText" destination="Vut-u1-sja" id="OS9-ja-DIV"/>
                 <outlet property="tweetText" destination="c4v-yW-Urj" id="dsC-1T-kIB"/>
                 <outlet property="userId" destination="xkP-Zs-B1H" id="wBS-1s-WnT"/>

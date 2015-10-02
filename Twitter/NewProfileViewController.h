@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
 
 @interface NewProfileViewController : UIViewController
-
+-(void)initializeWithUser:(User *)user;
+@property (nonatomic, assign) BOOL modalDialog;
 @end

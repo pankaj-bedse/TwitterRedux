@@ -15,6 +15,7 @@
 #import "NewTweetViewController.h"
 #import "TweetDetailViewController.h"
 #import "SWRevealViewController.h"
+#import "NewProfileViewController.h"
 
 @interface TweetsViewController () <UITableViewDataSource, UITableViewDelegate, NewTweetDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -95,10 +96,30 @@
     cell.tweetText.text = [self.tweets[indexPath.row] text];
     cell.userId.text = [NSString stringWithFormat:@"@%@", user.screenName];
     cell.userName.text = user.name;
-    [cell.profileImage setImageWithURL:[NSURL URLWithString:user.profileImageUrl]];
+    //[cell.profileImage setImageWithURL:[NSURL URLWithString:user.profileImageUrl]];
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     formatter.dateFormat = @"M/d/yy";
     cell.timeText.text = [formatter stringFromDate:tweet.createdAt];
+    UIImageView *imageView = [[UIImageView alloc] init];
+    
+    // Fetch the image data from a specific URL
+    NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:user.profileImageUrl]];
+    
+    // Assign the image data we fetched to the UIImageView
+    imageView.image = [UIImage imageWithData:imageData];
+
+    
+    [cell.profileImageBtn setBackgroundImage:imageView.image forState:UIControlStateNormal];
+    cell.profileImageBtn.tag = indexPath.row;
+    [cell.profileImageBtn addTarget:self action:@selector(showProfile:) forControlEvents:UIControlEventTouchUpInside];
+//    UITapGestureRecognizer *utg = [[UITapGestureRecognizer alloc] initWithTarget:cell.imageView action:@selector(tapGesture:)];
+//    utg.numberOfTapsRequired = 1;
+//    utg.numberOfTouchesRequired = 1;
+//    utg.cancelsTouchesInView = YES;
+//    [utg setDelegate:self];
+//    cell.imageView.userInteractionEnabled = YES;
+//    [cell.imageView addGestureRecognizer:utg];
+
     
     return cell;
 }
@@ -178,6 +199,35 @@
         self.tweets = tweets;
         [self.tableView reloadData];
     }];
+}
+
+-(void)showProfile:(id)sender
+{
+    CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.tableView];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:buttonPosition];
+    if (indexPath != nil) {
+        NSLog(@"tab on image in row : %ld", (long)indexPath.row);
+        Tweet *tweet = self.tweets[indexPath.row];
+        
+        [[TwitterClient sharedInstance] getUserWithScreenName:tweet.user.screenName completion:^(User *user, NSError *error) {
+            if (user != nil) {
+                [self displayUserProfileWithUser:user];
+            }
+        }];
+    }
+
+}
+
+-(void)displayUserProfileWithUser:(User *)user
+{
+    NewProfileViewController *npvc = [[NewProfileViewController alloc] init];
+    //newTweet.delegate = self;
+    //[self showViewController:newTweet sender:self];
+    [npvc initializeWithUser:user];
+    npvc.modalDialog = YES;
+    
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:npvc];
+    [self presentViewController:nvc animated:YES completion:nil];
 }
 #pragma NewTweetDelegate
 -(void)newTweet:(NSString *)tweetText

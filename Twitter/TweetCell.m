@@ -20,4 +20,7 @@
     // Configure the view for the selected state
 }
 
+- (IBAction)showProfile:(id)sender {
+    NSLog(@"image tabbed");
+}
 @end

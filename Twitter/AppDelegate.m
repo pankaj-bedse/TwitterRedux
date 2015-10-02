@@ -107,6 +107,7 @@
     UINavigationController *lmnc = [[UINavigationController alloc] initWithRootViewController:lmvc];
     //ProfileViewController *pvc = [[ProfileViewController alloc] init];
     NewProfileViewController *pvc = [[NewProfileViewController alloc] init];
+    [pvc initializeWithUser:[User currentUser]];
     UINavigationController *pnc = [[UINavigationController alloc] initWithRootViewController:pvc];
     
     SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:lmnc frontViewController:pnc];//[[TweetsViewController alloc]init];
